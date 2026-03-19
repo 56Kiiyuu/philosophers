@@ -36,4 +36,4 @@ philosopher dies.
 
 - Medium : https://medium.com/@ruinadd/philosophers-42-guide-the-dining-philosophers-problem-893a24bc0fe2
 - Gitbook : https://42-cursus.gitbook.io/guide/3-rank-03/philosophers
-- AI : fixing data races
+- AI : fixing data races and starvation problems
