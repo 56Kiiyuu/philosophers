@@ -45,7 +45,11 @@ void	initial_delay(t_philo *philo)
 	}
 	else
 	{
-		if (philo->id % 2 == 0)
+		if (philo->id == 2)
+			precise_sleep(philo->data->eat, philo->data);
+		else if (philo->id == 3)
+			precise_sleep(philo->data->eat * 0.5, philo->data);
+		else if (philo->id % 2 == 0)
 			precise_sleep(philo->data->eat, philo->data);
 	}
 }
