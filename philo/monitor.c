@@ -50,20 +50,6 @@ int	helper_all_finished(t_data *data)
 	return (finished >= data->nb_philo);
 }
 
-int	helper_check_all_dead(t_data *data)
-{
-	int	i;
-
-	i = 0;
-	while (i < data->nb_philo)
-	{
-		if (check_death(&data->philos[i]))
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
 void	*monitor(void *arg)
 {
 	t_data	*data;
