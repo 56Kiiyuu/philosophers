@@ -38,20 +38,10 @@ void	handle_one_philo(t_philo *philo)
 
 void	initial_delay(t_philo *philo)
 {
-	if (philo->data->nb_philo % 2 == 0)
-	{
-		if (philo->id % 2 == 0)
-			precise_sleep(philo->data->eat / 2, philo->data);
-	}
-	else
-	{
-		if (philo->id == 2)
-			precise_sleep(philo->data->eat, philo->data);
-		else if (philo->id == 3)
-			precise_sleep(philo->data->eat * 0.5, philo->data);
-		else if (philo->id % 2 == 0)
-			precise_sleep(philo->data->eat, philo->data);
-	}
+	if (philo->id % 2 == 0)
+		precise_sleep(philo->data->eat / 2, philo->data);
+	if (philo->data->nb_philo % 2 != 0 && philo->id == philo->data->nb_philo)
+		precise_sleep(philo->data->eat, philo->data);
 }
 
 void	*routine(void *arg)
